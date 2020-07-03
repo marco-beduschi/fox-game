@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "npm rum build && git add docs/ && git commit -m 'lastest build' && git push origin master",
+    "build": "parcel build src/index.html --out-dir docs --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html"
   },
@@ -19,5 +21,8 @@
   },
   "browserslist": [
     "last 2 Chrome versions"
-  ]
+  ],
+  "dependencies": {
+    "typescript": "^3.9.6"
+  }
 }
